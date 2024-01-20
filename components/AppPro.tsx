@@ -5,12 +5,10 @@ import {
   Text,
   StyleSheet,
   useColorScheme,
-  Button
+  Button,
 } from 'react-native';
 
-const AppPro = (): JSX.Element => {
-  const [mode, setMode] = useState(true);
-
+const AppPro = ({mode, setMode}): JSX.Element => {
   return (
     <View style={styles.container}>
       <Text
@@ -22,7 +20,7 @@ const AppPro = (): JSX.Element => {
         Pro hu bhai
       </Text>
       <Text
-      style={styles.button}
+        style={styles.button}
         onPress={() => {
           setMode(!mode);
         }}>
@@ -36,14 +34,14 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   button: {
     backgroundColor: 'black',
     padding: 10,
     borderRadius: 50,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });
 
 export default AppPro;
